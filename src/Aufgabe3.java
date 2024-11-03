@@ -14,7 +14,12 @@ public class Aufgabe3 {
     }
 
     private static void printHarshadNumbersInInterval(int start, int end) {
-        //TODO: Implementieren Sie hier Ihre Lösung für die Angabe
+        for (int i = start; i <= end; i++) {
+            if (isHarshadNumber(i)) {
+                System.out.print(i + " ");
+            }
+        }
+        System.out.println();
     }
 
     public static void main(String[] args) {
@@ -37,6 +42,8 @@ public class Aufgabe3 {
         assert (isHarshadNumber(172986));
         //**********************************************************************
 
+        printHarshadNumbersInInterval(51, 79);
+        printHarshadNumbersInInterval(1, 50);
         //TODO: Testen Sie hier alle Methoden mit verschiedenen Inputs!
     }
 }
