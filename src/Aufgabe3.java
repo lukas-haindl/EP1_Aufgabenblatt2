@@ -4,8 +4,13 @@
 public class Aufgabe3 {
 
     private static boolean isHarshadNumber(int number) {
-        //TODO: Implementieren Sie hier Ihre Lösung für die Angabe
-        return false; //Zeile kann geändert oder entfernt werden.
+        int checksum = 0;
+        int n = number;
+        while(n > 0){
+            checksum += (n % 10);
+            n /= 10;
+        }
+        return number % checksum == 0;
     }
 
     private static void printHarshadNumbersInInterval(int start, int end) {
